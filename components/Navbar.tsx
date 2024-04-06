@@ -40,6 +40,12 @@ const Navbar: React.FC<Props> = () => {
             bgColor='transparent'
             />
             <SocialIcon
+            url='https://vercel.com/sheharyartariqs-projects'
+            target='_blank'
+            fgColor='gray'
+            bgColor='transparent'
+            />
+            <SocialIcon
             url='https://www.upwork.com/freelancers/~019897580da9efcffc'
             target='_blank'
             fgColor='gray'

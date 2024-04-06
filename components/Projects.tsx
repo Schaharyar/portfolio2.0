@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import { motion } from 'framer-motion';
-
+import Link from 'next/link';
 
 interface Props {
     
@@ -29,7 +29,14 @@ const Projects: React.FC<Props> = () => {
                     //   viewport={{once: true}}
                     src="/no-back.png"/>
                     <div className='space-y-10 px-0 md:px-10 max-w-6xl'>
-                        <h4 className='text-xl md:text-4xl font-bold text-center'>Case Study  of : BG Remover</h4>
+                        <Link
+                        className='text-[#F7AB0A]' 
+                        href="https://bgremove66.netlify.app/">
+                        <h4 className='text-xl md:text-4xl font-bold flex  text-center'>Case Study of : BG Remover
+                        <img
+                        className='h-5 w-5 md:h-7 md:w-7 ml-2 mt-1' 
+                        src="/external-link.png"/></h4>
+                        </Link>
                         <p className='text-lg text-center md:text-left'>
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                         </p>
@@ -39,7 +46,13 @@ const Projects: React.FC<Props> = () => {
                 <div className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen'>
                     <img src="/no-back.png" alt="" />
                     <div className='space-y-10 px-0 md:px-10 max-w-6xl'>
-                        <h4 className='text-xl md:text-4xl font-bold text-center'>Case Study  of : Todo</h4>
+                        <Link
+                        className='text-[#F7AB0A]' 
+                        href="https://bgchanger66.netlify.app/">
+                        <h4 className='text-xl md:text-4xl font-bold flex text-center'>Case Study  of : Color Changer<img
+                        className='h-5 w-5 md:h-7 md:w-7 ml-2 mt-1' 
+                        src="/external-link.png"/></h4>
+                        </Link>
                         <p className='text-lg text-center md:text-left'>
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                         </p>
@@ -49,7 +62,14 @@ const Projects: React.FC<Props> = () => {
                 <div className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen'>
                     <img src="/no-back.png" alt="" />
                     <div className='space-y-10 px-0 md:px-10 max-w-6xl'>
-                        <h4 className='text-xl md:text-4xl font-bold text-center'>Case Study  of : BG Changer</h4>
+                        <Link 
+                        className='text-[#F7AB0A]'
+                        href="https://todo66.netlify.app/"
+                        >
+                        <h4 className='text-xl md:text-4xl font-bold flex text-center'>Case Study  of : Todo List<img
+                        className='h-5 w-5 md:h-7 md:w-7 ml-2 mt-1' 
+                        src="/external-link.png"/></h4>
+                        </Link>
                         <p className='text-lg text-center md:text-left'>
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                         </p>
