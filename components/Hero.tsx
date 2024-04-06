@@ -3,7 +3,7 @@ import React, {  ReactElement } from 'react'
 import { Cursor, useTypewriter } from 'react-simple-typewriter'
 import BackgroundCircles from '@/components/BackgroundCircles'
 import Link from 'next/link';
-
+import Image from 'next/image';
 
 interface Props {
   
@@ -24,9 +24,11 @@ export default function Hero({}: Props): ReactElement {
    
     <div className='h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden'>
       <BackgroundCircles />
+      
+      
       <img
       className='relative rounded-full h-32 w-32 mx-auto object-cover' 
-      src="https://media.licdn.com/dms/image/D4D03AQGW4yKI-oHyZA/profile-displayphoto-shrink_200_200/0/1709788420097?e=2147483647&v=beta&t=IpWU5K4QEVMey1H8e7pa5cKnTpFVoP2sA1qVuJ9-07E" alt="Sherry" />
+      src="/usr.jpeg" alt="Sherry" />
       <div className='z-20'>
         <h2 className='text-sm uppercase text-gray-500 pb-2 tracking-[15px]'>
           Software Engineer  
