@@ -30,16 +30,13 @@ const About: React.FC<Props> = () => {
             md:rounded-lg md:w-64 md:h-95 xl:w-64 xl:h-95'
        />    
       
-       <div className='space-y-10 px-0 md:px-10'>
+       <div className='space-y-3 px-0 md:px-10'>
         <h4
-         className='text-3xl font-semibold'>Here is a <span className='underline decoration-[#F7AB0A]'>little</span> Background.</h4>
+         className='text-xl md:text-3xl font-semibold'>Here is a <span className='underline decoration-[#F7AB0A]'>little</span> Background.</h4>
         <p
          className='text-base'>
         Highly skilled MERN Stack Developer with [3 years] of experience in designing, developing, and deploying web appli-
         cations. Proficient in utilizing MongoDB, Express.js, React.js, and Node.js to deliver robust and efficient solutions.
-        Strong understanding of frontend and backend technologies, along with expertise in database management and API
-        integration. Passionate about staying updated with the latest technologies and contributing innovative ideas to
-        collaborative projects.
         </p>
        </div>
         </motion.div>

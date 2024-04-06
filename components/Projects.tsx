@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import { motion } from 'framer-motion';
-import Image from 'next/image';
+
 
 interface Props {
     
@@ -20,9 +20,16 @@ const Projects: React.FC<Props> = () => {
            
                 
                 <div className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen'>
-                    <img src="/no-back.png" alt="" />
+                    <motion.img
+                     initial={{ y: -200, opacity: 0}}
+                     transition={{
+                      duration: 1.2
+                     }}
+                      whileInView={{ y: 0, opacity: 1}}
+                    //   viewport={{once: true}}
+                    src="/no-back.png"/>
                     <div className='space-y-10 px-0 md:px-10 max-w-6xl'>
-                        <h4 className='text-4xl font-bold text-center'>Case Study  of : BG Remover</h4>
+                        <h4 className='text-xl md:text-4xl font-bold text-center'>Case Study  of : BG Remover</h4>
                         <p className='text-lg text-center md:text-left'>
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                         </p>
@@ -32,7 +39,7 @@ const Projects: React.FC<Props> = () => {
                 <div className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen'>
                     <img src="/no-back.png" alt="" />
                     <div className='space-y-10 px-0 md:px-10 max-w-6xl'>
-                        <h4 className='text-4xl font-bold text-center'>Case Study  of : Todo</h4>
+                        <h4 className='text-xl md:text-4xl font-bold text-center'>Case Study  of : Todo</h4>
                         <p className='text-lg text-center md:text-left'>
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                         </p>
@@ -42,7 +49,7 @@ const Projects: React.FC<Props> = () => {
                 <div className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen'>
                     <img src="/no-back.png" alt="" />
                     <div className='space-y-10 px-0 md:px-10 max-w-6xl'>
-                        <h4 className='text-4xl font-bold text-center'>Case Study  of : BG Changer</h4>
+                        <h4 className='text-xl md:text-4xl font-bold text-center'>Case Study  of : BG Changer</h4>
                         <p className='text-lg text-center md:text-left'>
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                         </p>
