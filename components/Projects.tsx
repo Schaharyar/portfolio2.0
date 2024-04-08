@@ -44,7 +44,13 @@ const Projects: React.FC<Props> = () => {
                 </div>
 
                 <div className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen'>
-                    <img src="/no-back.png" alt="" />
+                    <motion.img
+                     initial={{ y: -200, opacity: 0}}
+                     transition={{
+                      duration: 1.2
+                     }}
+                      whileInView={{ y: 0, opacity: 1}} 
+                    src="/no-back.png" alt="" />
                     <div className='space-y-10 px-0 md:px-10 max-w-6xl'>
                         <Link
                         className='text-[#F7AB0A]' 
@@ -59,7 +65,7 @@ const Projects: React.FC<Props> = () => {
                     </div>
                 </div>
 
-                <div className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen'>
+                {/* <div className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center        justify-center p-20 md:p-44 h-screen'>
                     <img src="/no-back.png" alt="" />
                     <div className='space-y-10 px-0 md:px-10 max-w-6xl'>
                         <Link 
@@ -74,7 +80,7 @@ const Projects: React.FC<Props> = () => {
                             Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                         </p>
                     </div>
-                </div>    
+                </div>     */}
         </div>
 
 
