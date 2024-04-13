@@ -35,8 +35,7 @@ const About: React.FC<Props> = () => {
          className='text-xl md:text-3xl font-semibold'>Here is a <span className='underline decoration-[#F7AB0A]'>little</span> Background.</h4>
         <p
          className='text-base'>
-        Highly skilled MERN Stack Developer with [3 years] of experience in designing, developing, and deploying web appli-
-        cations. Proficient in utilizing MongoDB, Express.js, React.js, and Node.js to deliver robust and efficient solutions.
+        As a seasoned Front-end Developer specializing in React.js and Tailwind CSS. With a passion for crafting intuitive and visually captivating user interfaces, I thrive in dynamic environments where innovation and collaboration are key.
         </p>
        </div>
         </motion.div>
