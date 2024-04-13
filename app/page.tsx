@@ -6,15 +6,20 @@ import Projects from "@/components/Projects";
 import Skill from "@/components/Skill";
 import WorkExperience from "@/components/WorkExperience";
 import  Link  from "next/link";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 
 
 export default function Home() {
   return (
+    <>
+    <ToastContainer theme="dark"/>
     <main className="bg-[rgb(36,36,36)] text-white h-screen  snap-y snap-mandatory overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
       {/* Hearder Section */}
       <Navbar />
 
+      
       {/* Hero Section*/}
       <section id="hero" className="snap-start">
         <Hero />
@@ -42,6 +47,8 @@ export default function Home() {
 
       <section id="contact" className="snap-start">
         <ContactMe />
+        
+       
       </section>
 
       <Link href="#hero">
@@ -55,5 +62,7 @@ export default function Home() {
       </Link>
 
     </main>
+     
+     </>
   );
 }

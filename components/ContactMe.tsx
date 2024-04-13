@@ -1,14 +1,9 @@
 'use client'
-import React from 'react'
+import React, {useState} from 'react'
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from '@heroicons/react/16/solid'
-// import { useForm, SubmitHandler } from "react-hook-form"
-
-
-// type Inputs = {
-//     Name: string
-//     email: string
-//     message: string
-//   }
+import emailjs from '@emailjs/browser'
+import { toast } from 'react-toastify'
+// import 'react-toastify/ReactToastify.css'
 
 
 interface Props {
@@ -16,11 +11,44 @@ interface Props {
 }
 
 const ContactMe: React.FC<Props> = () => {
-//     const { register, handleSubmit } = useForm<Inputs>();
-//   const onSubmit: SubmitHandler<Inputs> = (e) => {
-//     e.target.reset();
-    // window.location.href =    `mailto:xheharyartariq@gmail?body=Hi my name is ${formData.Name}. ${formData.message} (${formData.email})`;
-//   };
+
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
+
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+
+        // Emailjs services
+        const serviceId = 'service_eq4a25d';
+        const templateId = 'template_n9q3m2m';
+        const publickey = 'pfX1zOv3KaGSPj6Pl';
+
+        const templateParams = {
+            from_name: name,
+            from_email: email,
+            to_name: 'Schaheryar',
+            message: message
+        };
+
+        // sending the mail
+        emailjs.send(serviceId, templateId, templateParams, publickey)
+        .then((Response) => {
+            alert('Message Sent Successfully')
+            // toast.success("Form Submitted!")
+            // console.log('Email send Successfully!', Response )
+            setName('');
+            setEmail('');
+            setMessage('');
+        })
+        .catch((error) => {
+            alert('Something went wrong!')
+            console.log('Error sending enail:', error)
+        })
+
+    }
 
     return (
         <div className='h-screen relative flex overflow-hidden flex-col text-left md:flex-row
@@ -50,11 +78,28 @@ const ContactMe: React.FC<Props> = () => {
                     </div>
                 </div>
 
-                <form
+                <form onSubmit={handleSubmit}
                     className='flex flex-col space-y-2 w-[350px] md:w-[400px] mx-auto'>
-                    <input  className='contactInput' placeholder='Name' type="text" required/>
-                    <input  className='contactInput' placeholder='Email' type="email" required/>
-                    <textarea  className='contactInput' placeholder='Message' required/>
+                    <input  
+                    className='contactInput' 
+                    placeholder='Name' 
+                    type="text"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)} 
+                    required/>
+                    <input  
+                    className='contactInput' 
+                    placeholder='Email' 
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)} 
+                    required/>
+                    <textarea  
+                    className='contactInput' 
+                    placeholder='Message'
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)} 
+                    required/>
                     <button
                     type='submit'  
                     className='bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold text-lg'>Submit</button>
