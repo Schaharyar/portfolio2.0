@@ -28,7 +28,7 @@ const Navbar: React.FC<Props> = () => {
         }}
          className='flex flex-row items-center xl:items-center'>
             <SocialIcon
-            url='https://github.com/Sheharyartariq'
+            url='https://github.com/Schaharyar'
             target='_blank'
             fgColor='gray'
             bgColor='transparent'
