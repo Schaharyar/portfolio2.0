@@ -3,7 +3,6 @@ import React, {useState} from 'react'
 import { PhoneIcon, MapPinIcon, EnvelopeIcon } from '@heroicons/react/16/solid'
 import emailjs from '@emailjs/browser'
 import { toast } from 'react-toastify'
-// import 'react-toastify/ReactToastify.css'
 
 
 interface Props {
