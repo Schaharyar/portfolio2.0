@@ -36,15 +36,15 @@ const ContactMe: React.FC<Props> = () => {
         // sending the mail
         emailjs.send(serviceId, templateId, templateParams, publickey)
         .then((Response) => {
-            alert('Message Sent Successfully')
-            // toast.success("Form Submitted!")
+            // alert('Message Sent Successfully')
+            toast.success("Form Submitted!")
             // console.log('Email send Successfully!', Response )
             setName('');
             setEmail('');
             setMessage('');
         })
         .catch((error) => {
-            alert('Something went wrong!')
+            toast.error('Something went wrong!')
             console.log('Error sending enail:', error)
         })
 
