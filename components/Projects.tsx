@@ -1,78 +1,81 @@
-'use client'
-import React from 'react'
+'use client';
+import React from 'react';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
+// import Link from 'next/link';
 
-interface Props {
-    
-}
+interface Props {}
 
 const Projects: React.FC<Props> = () => {
-   
+    const projects = [
+        {
+            title: "BG Remover",
+            description: "Built a tool to remove the background of an image using ReactJS and External APIs.",
+            image: "/bgremove.png",
+            link: "https://bgremove66.netlify.app",
+        },
+        {
+            title: "Color Changer",
+            description: "A tool where users can input any color name to display it. Built with ReactJS.",
+            image: "/no-back.png",
+            link: "https://bgchanger66.netlify.app/",
+        },
+    ];
+
     return (
-        <div
-        className='h-screen relative flex overflow-hidden flex-col text-left md:flex-row
-        max-w-ful justify-evenly mx-auto items-center z-0'>
-            <h3 className='absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl'>Projects</h3> 
-        
-        <div className='relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20
-        scrollbar scrollbar-thin scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80'>
-           
-                
-                <div className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen'>
-                    <motion.img
-                     initial={{ y: -200, opacity: 0}}
-                     transition={{
-                      duration: 1.2
-                     }}
-                      whileInView={{ y: 0, opacity: 1}}
-                    //   viewport={{once: true}}
-                    className='rounded-md h-55 md:h-30 xl:h-60'
-                    src="/bgremove.png"/>
-                    <div className='space-y-10 px-0 md:px-10 max-w-6xl'>
-                        <Link
-                        className='text-[#F7AB0A]' 
-                        href="https://bgremove66.netlify.app">
-                        <h4 className='text-xl md:text-4xl font-bold flex  text-center'>Case Study of : BG Remover
-                        <img
-                        className='h-5 w-5 md:h-7 md:w-7 ml-2 mt-1' 
-                        src="/external-link.png"/></h4>
-                        </Link>
-                        <p className='text-lg text-center md:text-left'>
-                        Built a tool to remove background of an image by using ReactJS and External APIs.   
-                        </p>
-                    </div>
-                </div>
+        <div className="h-screen relative flex flex-col text-left md:flex-row max-w-full justify-evenly items-center mx-auto overflow-hidden z-0">
+            <h3 className="absolute top-16 uppercase tracking-[20px] text-gray-500 text-2xl">
+                Projects
+            </h3>
 
-                <div className='w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen'>
-                    <motion.img
-                     initial={{ y: -200, opacity: 0}}
-                     transition={{
-                      duration: 1.2
-                     }}
-                      whileInView={{ y: 0, opacity: 1}}
-                      
-                    src="/no-back.png" alt="" />
-                    <div className='space-y-10 px-0 md:px-10 max-w-6xl'>
-                        <Link
-                        className='text-[#F7AB0A]' 
-                        href="https://bgchanger66.netlify.app/">
-                        <h4 className='text-xl md:text-4xl font-bold flex text-center'>Case Study  of : Color Changer<img
-                        className='h-5 w-5 md:h-7 md:w-7 ml-2 mt-1' 
-                        src="/external-link.png"/></h4>
-                        </Link>
-                        <p className='text-lg text-center md:text-left'>
-                        In this tool the user can write any color name and the colors display. This is also built with the help of ReactJS
-                        </p>
-                    </div>
-                </div>
+            <div className="relative flex flex-col md:flex-row w-full items-center justify-center space-y-10 md:space-y-0 md:space-x-10 p-10">
+                {projects.map((project, index) => (
+                    <motion.div
+                        key={index}
+                        className="group relative w-[90%] md:w-[45%] lg:w-[40%] bg-[#292929] rounded-lg shadow-lg p-6 overflow-hidden transition-transform duration-300 hover:scale-105"
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: index * 0.2 }}
+                        viewport={{ once: true }}
+                    >
+                        <div className="flex justify-center">
+                            <motion.img
+                                src={project.image}
+                                alt={project.title}
+                                className="rounded-md object-cover h-40 w-auto"
+                                initial={{ scale: 0.9, opacity: 0 }}
+                                whileInView={{ scale: 1, opacity: 1 }}
+                                transition={{ duration: 0.6, delay: 0.2 }}
+                                viewport={{ once: true }}
+                            />
+                        </div>
+                        <div className="mt-6">
+                            <h4 className="text-2xl font-bold text-white group-hover:text-[#F7AB0A] transition-colors duration-300">
+                                {project.title}
+                            </h4>
+                            <p className="text-sm text-gray-300 mt-2">{project.description}</p>
+                            <a
+                                href={project.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="mt-4  text-[#F7AB0A] font-semibold flex items-center hover:underline cursor-pointer"
+                            >
+                                View Project
+                                <img
+                                    src="/external-link.png"
+                                    alt="Link"
+                                    className="h-5 w-5 ml-2"
+                                />
+                            </a>
+                        </div>
+                    </motion.div>
+                ))}
+            </div>
 
+            {/* Background Element */}
+            <div className="absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[500px] w-full -skew-y-12" />
         </div>
+    );
+};
 
+export default Projects;
 
-        <div className='w-full absolute top-[30%] bg-[#F7AB0A]/10 left-0 h-[500px] -skew-y-12'/>
-        </div>
-    )
-}
-
-export default Projects

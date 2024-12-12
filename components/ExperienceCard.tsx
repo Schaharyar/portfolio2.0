@@ -2,43 +2,35 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-interface Props {
-    
-}
+interface Props {}
 
 const ExperienceCard: React.FC<Props> = () => {
     return (
-        <article className='flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[400px] md:w-[600px]  xl:w-[900px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden'>
+        <article className="flex flex-col items-center space-y-4 w-full max-w-sm bg-[#292929] p-6 rounded-lg shadow-md hover:opacity-100 opacity-90 cursor-pointer transition-opacity duration-200">
             <motion.img
-            initial={{
-                y: -100,
-                opacity: 0
-            }}
-            transition={{duration: 1.2}}
-            whileInView={{opacity: 1, y: 0}}
-            viewport={{once: true}}
-            className='h-32 w-32 rounded-full xl:h-[200px] xl:w-[200px] object-cover object-center' 
-            src="https://avatars.githubusercontent.com/u/99352538?v=4" alt="" />
+                initial={{
+                    y: -50,
+                    opacity: 0
+                }}
+                transition={{ duration: 0.8 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="h-24 w-24 rounded-full object-cover"
+                src="https://avatars.githubusercontent.com/u/99352538?v=4"
+                alt="Profile Picture"
+            />
 
-            <div className='px-0 md:px-10'>
-                <h4 className='text-4xl font-light'>Network Tecnician</h4>
-                <p className='font-bold text-2xl mt-1'>Self-Employed</p>
-                {/* <div className='flex space-x-2 my-2'>
-                    <img className='h-10 w-10 rounded-full' 
-                    src="https://avatars.githubusercontent.com/u/99352538?v=4" />
-                    <img className='h-10 w-10 rounded-full' 
-                    src="https://avatars.githubusercontent.com/u/99352538?v=4" />
-                    <img className='h-10 w-10 rounded-full'
-                    src="https://avatars.githubusercontent.com/u/99352538?v=4" />
-                </div> */}
-                     <p className='uppercase py-5 text-gray-300'>2021 - 2023</p>
-
-                    <ul className='list-disc space-y-4 ml-5 text-lg'>
-                        <li>Troubleshooting network or server problems</li>
-                        <li>Testing and configuring software</li>
-                        <li>Configuring network software</li>
-                    </ul>
+            <div className="text-center">
+                <h4 className="text-2xl font-semibold text-white">Network Technician</h4>
+                <p className="text-lg font-medium text-gray-300 mt-1">Self-Employed</p>
+                <p className="text-sm text-gray-500 uppercase mt-2">2021 - 2023</p>
             </div>
+
+            <ul className="list-disc text-left space-y-2 text-gray-400 text-sm px-6">
+                <li>Troubleshooting network and server problems</li>
+                <li>Testing and configuring software</li>
+                <li>Setting up and managing network systems</li>
+            </ul>
         </article>
     )
 }
