@@ -58,7 +58,7 @@ const Projects: React.FC<Props> = () => {
     };
 
     return (
-        <div className="relative flex flex-col items-center justify-center max-w-full px-6 mx-auto overflow-hidden z-0">
+        <div className="relative h-screen flex flex-col items-center justify-center max-w-full px-6 mx-auto overflow-hidden z-0">
             {/* Heading */}
             <h3 className="absolute top-10 uppercase tracking-[20px] text-gray-500 text-2xl">
                 Projects
