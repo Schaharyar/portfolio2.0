@@ -14,9 +14,7 @@ function Skills({}: Props) {
                 { src: "/js.png", name: "JavaScript" },
                 { src: "/icons8-tailwind-css-96.png", name: "Tailwind CSS" },
                 { src: "/icons8-nextjs-144.png", name: "Next.js" },
-                { src: "/icons8-typescript-96.png", name: "TypeScript" },
-                { src: "/code-branch.png", name: "Git" },
-                { src: "/technology.png", name: "Tech Tools" },
+                { src: "/code-branch.png", name: "Git & GitHub" },
                 { src: "/devops.png", name: "DevOps" },
             ].map((skill, index) => (
                 <motion.div
