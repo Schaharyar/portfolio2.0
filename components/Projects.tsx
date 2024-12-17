@@ -65,7 +65,7 @@ const Projects: React.FC<Props> = () => {
             </h3>
 
             {/* Filter Buttons */}
-            <div className="flex gap-4  mt-40">
+            <div className="flex gap-4  md:mt-[15rem] sm:mt-0">
                 {["All", "Tools", "Web App", "Full Stack"].map((category) => (
                     <button
                         key={category}
