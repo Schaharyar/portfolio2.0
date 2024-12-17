@@ -49,17 +49,18 @@ export default function Home() {
 
         {/* Footer (scroll to top) */}
         <Link href="#hero">
-          <footer className="fixed bottom-5 left-1/2 transform -translate-x-1/2 w-12 h-12 cursor-pointer transition-all duration-300 ease-in-out opacity-0 md:opacity-100 z-50">
-            <div className="flex items-center justify-center h-full w-full">
-              <img
-                className="rounded-full filter grayscale hover:grayscale-0 cursor-pointer transition-all duration-500 ease-in-out transform hover:scale-110"
-                width="48"
-                height="48"
-                src="https://img.icons8.com/color/48/chevron-up.png"
-                alt="chevron-up"
-              />
-            </div>
-          </footer>
+        <footer className="fixed bottom-5 left-1/2 transform -translate-x-1/2 w-12 h-12 cursor-pointer transition-all duration-300 ease-in-out opacity-100 z-50">
+  <div className="flex items-center justify-center h-full w-full">
+    <img
+      className="rounded-full filter grayscale hover:grayscale-0 cursor-pointer transition-all duration-500 ease-in-out transform hover:scale-110"
+      width="48"
+      height="48"
+      src="https://img.icons8.com/color/48/chevron-up.png"
+      alt="chevron-up"
+    />
+  </div>
+</footer>
+
         </Link>
       </main>
     </>
