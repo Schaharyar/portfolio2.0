@@ -60,12 +60,12 @@ const Projects: React.FC<Props> = () => {
     return (
         <div className="relative h-screen flex flex-col items-center justify-center max-w-full px-6 mx-auto overflow-hidden z-0">
             {/* Heading */}
-            <h3 className="absolute top-10 uppercase tracking-[20px] text-gray-500 text-2xl">
+            <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
                 Projects
             </h3>
 
             {/* Filter Buttons */}
-            <div className="flex gap-4 my-10 mt-28">
+            <div className="flex gap-4  mt-40">
                 {["All", "Tools", "Web App", "Full Stack"].map((category) => (
                     <button
                         key={category}
@@ -104,7 +104,7 @@ const Projects: React.FC<Props> = () => {
                     <motion.img
                         src={filteredProjects[currentProjectIndex].image}
                         alt={filteredProjects[currentProjectIndex].title}
-                        className="object-cover w-full h-64 transition-transform duration-500 group-hover:scale-105"
+                        className="object-contain w-full h-64 transition-transform duration-500 group-hover:scale-105"
                     />
 
                     {/* Overlay */}
