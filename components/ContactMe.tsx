@@ -41,13 +41,12 @@ const ContactMe: React.FC<Props> = () => {
 
   return (
     <div
-      className="relative flex flex-col justify-center items-center text-left z-0 px-6 py-8 md:px-10"
+      className="relative flex flex-col justify-center items-center text-left z-0 px-6 py-8 md:px-10 md:h-[80vh] h-screen sm:h-auto"
       style={{
         backgroundImage: `url('/bg-footer.jpg')`, // Replace with your image path
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
-        height: '100vh', // Increased height of the section
       }}
     >
       <div className="absolute inset-0 bg-black opacity-50 z-0" />
@@ -85,7 +84,7 @@ const ContactMe: React.FC<Props> = () => {
         {/* Form Section */}
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col space-y-3 w-full md:w-1/2"
+          className="flex flex-col space-y-3 w-full md:w-1/2 hidden sm:flex"
         >
           <input
             className="contactInput"
