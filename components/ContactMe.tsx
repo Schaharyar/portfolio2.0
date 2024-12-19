@@ -62,7 +62,7 @@ const ContactMe: React.FC<Props> = () => {
         <div className="flex flex-col space-y-4 w-full md:w-1/2">
           <h4 className="text-2xl font-semibold text-gray-100">
             I have just what you need.{' '}
-            <span className="underline decoration-[#F7AB0A]/50">Let's Talk</span>
+            <span className="underline decoration-[#F7AB0A]/50">Let&#39;s Talk</span>
           </h4>
 
           <div className="space-y-3 text-gray-200">

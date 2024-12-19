@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Projects from "@/components/Projects";
 import Skill from "@/components/Skill";
 import WorkExperience from "@/components/WorkExperience";
+import Image from "next/image";
 import Link from "next/link";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
